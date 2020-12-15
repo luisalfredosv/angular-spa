@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { APP_ROUTING } from './app.routes';
 
 // Servicios
-import { HeroesService } from "./services/heroes.service";
+import { HeroesService } from './services/heroes.service';
 
 
 // Componentes
@@ -16,6 +16,8 @@ import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { BuscadorComponent } from './components/buscador/buscador.component';
+import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     AboutComponent,
     HeroesComponent,
     HeroeComponent,
-    FooterComponent
+    FooterComponent,
+    BuscadorComponent,
+    HeroeTarjetaComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     APP_ROUTING
   ],
   providers: [
-    // Aqui van los servicios 
+    // Aqui van los servicios
     HeroesService
   ],
   bootstrap: [AppComponent]

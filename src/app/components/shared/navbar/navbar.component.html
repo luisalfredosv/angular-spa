@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bt-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" [routerLink]="['home']" >Navbar</a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -13,6 +13,14 @@
                     <a class="nav-link" [routerLink]="['about']" >About</a>
                 </li>
             </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <input type="text" class="form-control mr-sm-2" placeholder="buscar heroe"  (keyup.enter)="buscarHeroe(buscarTexto.value)" #buscarTexto>
+                <button class="btn btn-outline-primary my2 my-sm-0" type="button" (click)="buscarHeroe(buscarTexto.value)">
+                  Buscar  
+                </button>
+            </form>
+
         </div>
 
 </nav>
